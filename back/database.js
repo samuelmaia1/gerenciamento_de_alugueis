@@ -1,8 +1,6 @@
 import pg from 'pg'
 const {Client} = pg
 
-
-
 import express from 'express'
 
 const app = express()

@@ -1,33 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Link } from '@chakra-ui/react'
 import './App.css'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="application">
+        <main className="main">
+          <header className='application-header'>
+            <nav className='application-header-navbar'>
+              <Link className='application-header-navbar-link'>Início</Link>
+              <Link className='application-header-navbar-link'>Materiais</Link>
+              <Link className='application-header-navbar-link'>Aluguéis</Link>
+              <Link className='application-header-navbar-link'>Clientes</Link>
+            </nav>
+          </header>
+          <div className='apresentation'>
+            <h1>Bem vindo ao gerenciador de Aluguéis!</h1>
+            <p>Selecione a opção desejada: </p>
+            <div className="apresentation-options">
+              <Link className='apresentation-options-link'>Cadastro</Link>
+              <Link className='apresentation-options-link'>Entrar</Link>
+            </div>
+          </div>
+        </main>
+        <footer className='application-footer'>
+          Desenvolvido por Samuel Maia
+        </footer>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
